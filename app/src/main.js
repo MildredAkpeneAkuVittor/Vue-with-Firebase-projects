@@ -5,6 +5,7 @@ import store from "./store";
 
 Vue.config.productionTip = false;
 Vue.component("alert",require('./components/alert.vue').default);
+Vue.component("todo",require('./components/ToDo.vue').default);
 Vue.component('button-counter', {
   data: function () {
     return {

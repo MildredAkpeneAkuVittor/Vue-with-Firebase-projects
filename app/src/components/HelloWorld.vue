@@ -13,7 +13,7 @@
     <button @click="add" >click me</button>
     <h2>Using Loop</h2>
     <ul>
-      <li v-for="student in students">{{student}}</li>
+  <li v-for="student in students" :key="student">{{student}}</li>
     </ul>
   </div>
 </template>
@@ -54,10 +54,6 @@ h3 {
 ul {
   list-style-type: none;
   padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 a {
   color: #42b983;
