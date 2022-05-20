@@ -48,24 +48,29 @@
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+           <a type="button" class="btn btn-primary loginBtn" data-toggle="modal" data-target="#login">Login</a>
           </form>
         </div>
       </div>
     </nav>
+    <Login></Login>>
   </div>
 </template>
 
 <script>
+import Login from '../components/Login.vue';
 export default {
   name: "Navbar",
   props: {
     msg: String,
   },
+  components:{ Login}
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.loginBtn{
+  color: white
+}
+</style>
