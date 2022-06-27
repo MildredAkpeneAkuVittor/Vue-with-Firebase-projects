@@ -5,10 +5,10 @@ import store from "./store";
 import "bootstrap";
 import "./assets/app.scss";
 import "popper.js";
-import $ from "jquery";
+import jQuery from "jquery";
 import vuetify from "./plugins/vuetify";
 
-$ = window.jQuery = jQuery;
+window.$ = window.jQuery = jQuery;
 
 Vue.config.productionTip = false;
 

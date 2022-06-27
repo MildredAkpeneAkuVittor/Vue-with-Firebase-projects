@@ -13,7 +13,7 @@
             <div class="card-body">
               <h5 class="card-title">Item 1</h5>
               <p>Description</p>
-              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="#" class="btn">Add to cart</a>
             </div>
           </div>
         </div>
@@ -27,7 +27,7 @@
             <div class="card-body">
               <h5 class="card-title">Item 2</h5>
               <p>Description</p>
-              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="#" class="btn ">Add to cart</a>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@
             <div class="card-body">
               <h5 class="card-title">Item 3</h5>
               <p>Description</p>
-              <a href="#" class="btn btn-primary">Add to cart</a>
+              <a href="#" class="btn">Add to cart</a>
             </div>
           </div>
         </div>

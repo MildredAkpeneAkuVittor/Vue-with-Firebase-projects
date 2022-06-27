@@ -48,23 +48,40 @@
               placeholder="Search"
               aria-label="Search"
             />
-           <a type="button" class="btn btn-primary loginBtn" data-toggle="modal" data-target="#login">Login</a>
+           <button type="button" class="btn btn-primary loginBtn" @click="openLogin">Login</button>
           </form>
         </div>
       </div>
     </nav>
-    <Login></Login>>
+    <v-dialog
+    v-model="LoginDialog"
+     width="400px"
+            height="400px"
+    >
+     <Login/>
+    </v-dialog>
+    
   </div>
 </template>
 
 <script>
-import Login from './Login.vue';
+import Login from "./Login.vue"
 export default {
   name: "Navbar",
+  data(){
+    return{
+      LoginDialog: false,
+    }
+  },
+  components:{Login},
   props: {
     msg: String,
   },
-  components:{ Login}
+  methods:{
+    openLogin () {
+      this.LoginDialog = true;
+    }
+  }
 };
 </script>
 

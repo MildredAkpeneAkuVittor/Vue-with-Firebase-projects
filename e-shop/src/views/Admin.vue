@@ -1,8 +1,8 @@
 <template>
   <div class="admin">
 <div class="page-wrapper default-theme sidebar-bg bg1 toggled">
-        <a id="show-sidebar" @click="closeMenu" class="btn btn-sm btn-dark" href="#">
-            <i class="fas fa-bars"></i>
+        <a id="show-sidebar" @click="openMenu" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars" @click="openMenu"></i>
         </a>
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
@@ -10,7 +10,7 @@
                 <div class="sidebar-item sidebar-brand">
                     <a href="#">Vue Shop</a>
                     <div id="close-sidebar" @click="closeMenu">
-                        <i class="fas fa-times"></i>
+                        <i class="fas fa-times" @click="closeMenu"></i>
                     </div>
                 </div>
                 <!-- sidebar-header  -->
@@ -19,8 +19,8 @@
                         <img class="img-responsive img-rounded" src="/img/user.png" alt="User picture">
                     </div>
                     <div class="user-info">
-                        <span class="user-name">Jhon
-                            <strong>Smith</strong>
+                        <span class="user-name">Mildred
+                            <strong>Vittor</strong>
                         </span>
                         <span class="user-role"> {{email}} </span>
                         <span class="user-status">
@@ -108,10 +108,20 @@
 export default {
   name: "Admin",
   components: {},
-  data ():{},
+  data (){
+      return{
+ isModalVisible : true
+      };
+     
+  },
   methods:{
+       
       closeMenu(){
-        $(".page-wrapper").toggleClass("toggled");
+        this.$(".page-wrapper").toggleClass("toggled");
+    
+      },
+      openMenu(){
+          this.isModalVisible = true;
       }
       // logout(){
       //     fb.auth().signOut()

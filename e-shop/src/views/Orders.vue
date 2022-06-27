@@ -1,7 +1,8 @@
 <template>
   <div class="orders">
     <div class="container">
-      <h3>Overview</h3>
+      <h3>Orders
+      </h3>
     </div>
   </div>
 </template>

@@ -4,6 +4,8 @@ import Home from "../views/Home.vue";
 import Admin from "../views/Admin.vue";
 import Overview from "../views/Overview.vue";
 import Login from "../components/Login.vue";
+import Products from "../views/Orders.vue";
+import Orders from "../views/Products.vue"
 
 Vue.use(VueRouter);
 
@@ -27,7 +29,20 @@ const routes = [
     path: "/Admin",
     name: "Admin ",
     component: Admin,
-    children: [{ path: "/Overview", name: "Overview ", component: Overview }],
+    children: [
+      { path: "Overview",
+     name: "Overview ", 
+     component: Overview
+     },
+     { path: "Products",
+     name: "Products ", 
+     component: Products
+     },
+     { path: "Orders",
+     name: "Orders ", 
+     component: Orders
+     }
+    ],
   },
 ];
 

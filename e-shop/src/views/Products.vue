@@ -1,7 +1,7 @@
 <template>
   <div class="producs">
     <div class="container">
-      <h3>Overview</h3>
+      <h3>Products</h3>
     </div>
   </div>
 </template>
