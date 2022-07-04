@@ -48,6 +48,7 @@
               placeholder="Search"
               aria-label="Search"
             />
+            <button type="button" class="btn mr-5" @click="openSignup">Register</button>
            <button type="button" class="btn btn-primary loginBtn" @click="openLogin">Login</button>
           </form>
         </div>
@@ -58,7 +59,17 @@
      width="400px"
             height="400px"
     >
-     <Login/>
+     <Login
+     :closeDialog="closeDialog"/>
+    </v-dialog>
+     <v-dialog
+    v-model="singupDialog"
+     width="400px"
+            height="400px"
+    >
+     <signup
+     :closeDialog="closeDialog"
+     />
     </v-dialog>
     
   </div>
@@ -66,21 +77,33 @@
 
 <script>
 import Login from "./Login.vue"
+import signup from "./signup.vue"
 export default {
   name: "Navbar",
   data(){
     return{
       LoginDialog: false,
+      singupDialog:false,
+
     }
   },
-  components:{Login},
+  components:{Login, signup},
   props: {
     msg: String,
   },
   methods:{
     openLogin () {
       this.LoginDialog = true;
-    }
+    },
+     openSignup () {
+      this.singupDialog = true;
+    },
+    closeDialog () {
+      this.LoginDialog =false;
+      
+      this.signupDialog = false;
+
+    },
   }
 };
 </script>
